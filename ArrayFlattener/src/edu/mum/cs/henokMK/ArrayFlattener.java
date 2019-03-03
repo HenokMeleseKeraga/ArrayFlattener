@@ -1,0 +1,36 @@
+package edu.mum.cs.henokMK;
+
+public class ArrayFlattener{
+	public static void main(String[] args){
+
+		int[][] input={{1,3},{0},{4,5,9}};
+		int[] result=ArrayFlattener.flatterArray(input);
+		System.out.print("[");
+		for(int i=0;i<result.length;i++){
+			System.out.print(result[i]+" ");
+		}
+		System.out.print("]");
+	}
+	public static int[] flatterArray(int[][] a){
+		int len=0;
+		for(int n=0;n<a.length;n++){
+			for(int m=0;m<a[n].length;m++){
+			len++;
+			}
+		}
+
+		int[] result= new int[len];
+		int k=0;
+		for(int i=0;i<a.length;i++){
+			for(int j=0;j<a[i].length;j++){
+				result[k]=a[i][j];
+				k++;
+			}
+		}
+   
+		return result;
+	}
+
+}
+
+
