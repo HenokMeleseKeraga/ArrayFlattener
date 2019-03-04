@@ -1,15 +1,14 @@
 package edu.mum.cs.henokMK;
 
+import java.util.Arrays;
+
 public class ArrayFlattener{
 	public static void main(String[] args){
 
 		int[][] input={{1,3},{0},{4,5,9}};
 		int[] result=ArrayFlattener.flatterArray(input);
-		System.out.print("[");
-		for(int i=0;i<result.length;i++){
-			System.out.print(result[i]+" ");
-		}
-		System.out.print("]");
+		System.out.println(Arrays.toString(result));
+
 	}
 	public static int[] flatterArray(int[][] a){
 		int len=0;
