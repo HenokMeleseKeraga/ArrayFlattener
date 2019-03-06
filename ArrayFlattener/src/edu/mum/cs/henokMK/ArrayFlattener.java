@@ -13,9 +13,7 @@ public class ArrayFlattener{
 	public static int[] flatterArray(int[][] a){
 		int len=0;
 		for(int n=0;n<a.length;n++){
-			for(int m=0;m<a[n].length;m++){
-			len++;
-			}
+			len+=a[n].length;
 		}
 
 		int[] result= new int[len];
